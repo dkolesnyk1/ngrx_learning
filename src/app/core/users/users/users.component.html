@@ -1,0 +1,11 @@
+<p>users works!</p>
+
+<app-user *ngFor="let user of users$ | async" [id]="user.id" [status]="user.status">
+
+</app-user>
+
+<button (click)="addUser()">Add User</button>
+
+selected user 
+{{ (addedUser$ | async)?.id}}
+{{ (addedUser$ | async)?.status}}
